@@ -15,6 +15,9 @@ public class UserRegistrationMain {
 		System.out.println("Enter email");
 		String email = sc.nextLine();
 		ur.isEmailValid(email);
+		System.out.println("Enter phone number");
+		String phno = sc.nextLine();
+		ur.isPhoneNumValid(phno);
 		sc.close();
 	}
 }

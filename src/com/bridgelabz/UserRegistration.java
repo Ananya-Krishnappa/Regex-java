@@ -67,4 +67,22 @@ public class UserRegistration {
 		System.out.println(result);
 		return m.matches();
 	}
+
+	/**
+	 * this validates the phone number
+	 * 
+	 * @param email
+	 * @return
+	 */
+	public boolean isPhoneNumValid(String phno) {
+		String phNumRegex = "[9]{1}[1]{1}+\s{1}+[0-9]{10}";
+		Pattern p = Pattern.compile(phNumRegex);
+		if (phno == null) {
+			return false;
+		}
+		Matcher m = p.matcher(phno);
+		String result = m.matches() ? "Phone number is valid" : "Phone number is not valid";
+		System.out.println(result);
+		return m.matches();
+	}
 }
