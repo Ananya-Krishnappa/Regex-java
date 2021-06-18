@@ -87,13 +87,13 @@ public class UserRegistration {
 	}
 
 	/**
-	 * this validates password
+	 * this validates password with atleast one Capital
 	 * 
 	 * @param email
 	 * @return
 	 */
 	public boolean isValidPassword(String password) {
-		String regex = "[A-Za-z0-9\\p{Punct}]{8,}";
+		String regex = "^(?=.*[A-Z])(?=.*[a-z0-9\\p{Punct}]).{8,}$";
 		Pattern p = Pattern.compile(regex);
 		if (password == null) {
 			return false;
