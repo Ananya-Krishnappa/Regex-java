@@ -18,6 +18,9 @@ public class UserRegistrationMain {
 		System.out.println("Enter phone number");
 		String phno = sc.nextLine();
 		ur.isPhoneNumValid(phno);
+		System.out.println("Enter password");
+		String password = sc.nextLine();
+		ur.isValidPassword(password);
 		sc.close();
 	}
 }

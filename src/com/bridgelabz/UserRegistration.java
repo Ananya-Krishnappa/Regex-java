@@ -85,4 +85,22 @@ public class UserRegistration {
 		System.out.println(result);
 		return m.matches();
 	}
+
+	/**
+	 * this validates password
+	 * 
+	 * @param email
+	 * @return
+	 */
+	public boolean isValidPassword(String password) {
+		String regex = "[A-Za-z0-9\\p{Punct}]{8,}";
+		Pattern p = Pattern.compile(regex);
+		if (password == null) {
+			return false;
+		}
+		Matcher m = p.matcher(password);
+		String result = m.matches() ? "Password is valid" : "Password is not valid";
+		System.out.println(result);
+		return m.matches();
+	}
 }
