@@ -12,5 +12,9 @@ public class UserRegistrationMain {
 		System.out.println("Enter last name");
 		String ln = sc.nextLine();
 		ur.isLastNameValid(ln);
+		System.out.println("Enter email");
+		String email = sc.nextLine();
+		ur.isEmailValid(email);
+		sc.close();
 	}
 }

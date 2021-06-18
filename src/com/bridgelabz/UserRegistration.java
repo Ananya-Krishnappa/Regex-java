@@ -48,4 +48,23 @@ public class UserRegistration {
 		System.out.println(result);
 		return m.matches();
 	}
+
+	/**
+	 * this validates the email string passed X* X,zero or more times X+ X,one or
+	 * more times
+	 * 
+	 * @param email
+	 * @return
+	 */
+	public boolean isEmailValid(String email) {
+		String emailRegex1 = "^[a-zA-Z0-9]+(.*)[a-zA-Z0-9]+@+[a-zA-Z0-9]+(.+)[a-zA-Z0-9]+(.*)[a-zA-Z0-9]$";
+		Pattern p = Pattern.compile(emailRegex1);
+		if (email == null) {
+			return false;
+		}
+		Matcher m = p.matcher(email);
+		String result = m.matches() ? "Email is valid" : "Email is not valid";
+		System.out.println(result);
+		return m.matches();
+	}
 }
