@@ -26,6 +26,26 @@ public class UserRegistration {
 			return false;
 		}
 		Matcher m = p.matcher(name);
+		String result = m.matches() ? "First name is valid" : "First name is not valid";
+		System.out.println(result);
+		return m.matches();
+	}
+
+	/**
+	 * This method validates the last name of user
+	 * 
+	 * @param name
+	 * @return boolean
+	 */
+	public boolean isLastNameValid(String name) {
+		String regex = "[A-Z]{1}[a-z]{2,}";
+		Pattern p = Pattern.compile(regex);
+		if (name == null) {
+			return false;
+		}
+		Matcher m = p.matcher(name);
+		String result = m.matches() ? "Last name is valid" : "Last name is not valid";
+		System.out.println(result);
 		return m.matches();
 	}
 }
