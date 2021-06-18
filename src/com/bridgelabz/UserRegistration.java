@@ -19,8 +19,8 @@ public class UserRegistration {
 	 * @param name
 	 * @return boolean
 	 */
-	public static boolean isFirstNameValid(String name) {
-		String regex = "[A-Z]{1}[a-z]{2}";
+	public boolean isFirstNameValid(String name) {
+		String regex = "[A-Z]{1}[a-z]{2,}";
 		Pattern p = Pattern.compile(regex);
 		if (name == null) {
 			return false;
