@@ -8,19 +8,19 @@ public class UserRegistrationMain {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter first name");
 		String fn = sc.nextLine();
-		ur.isFirstNameValid(fn);
+		ur.validate(fn, InputField.FIRST_NAME);
 		System.out.println("Enter last name");
 		String ln = sc.nextLine();
-		ur.isLastNameValid(ln);
+		ur.validate(ln, InputField.LAST_NAME);
 		System.out.println("Enter email");
 		String email = sc.nextLine();
-		ur.isEmailValid(email);
+		ur.validate(email, InputField.EMAIL);
 		System.out.println("Enter phone number");
 		String phno = sc.nextLine();
-		ur.isPhoneNumValid(phno);
+		ur.validate(phno, InputField.PHONE_NO);
 		System.out.println("Enter password");
 		String password = sc.nextLine();
-		ur.isValidPassword(password);
+		ur.validate(password, InputField.PASSWORD);
 		sc.close();
 	}
 }
