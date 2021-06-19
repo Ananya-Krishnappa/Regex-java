@@ -31,7 +31,7 @@ public class UserRegistration {
 			regex = "[A-Z]{1}[a-z]{2,}";
 			break;
 		case EMAIL:
-			regex = "^[a-zA-Z0-9]+(.*)[a-zA-Z0-9]+@+[a-zA-Z0-9]+(.+)[a-zA-Z0-9]+(.*)[a-zA-Z0-9]$";
+			regex = "^[a-zA-Z0-9]+(.?)[a-zA-Z0-9]+@+[a-zA-Z0-9]+(.+)[a-zA-Z0-9]+(.*)[a-zA-Z]{2,}$";
 			break;
 		case PHONE_NO:
 			regex = "[9]{1}[1]{1}+\s{1}+[0-9]{10}";
