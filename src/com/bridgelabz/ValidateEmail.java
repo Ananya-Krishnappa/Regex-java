@@ -1,37 +1,15 @@
 /**
- * Purpose:To validate email ids
+ * Purpose:To userRegistration.validate email ids
  * @author Ananya K
  * @version 1.0
- * @since 16/06/2021
+ * @since 18/06/2021
  * 
  */
 package com.bridgelabz;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class ValidateEmail {
-
-	/**
-	 * this validates the email string passed X* X,zero or more times X+ X,one or
-	 * more times
-	 * 
-	 * @param email
-	 * @return
-	 */
-	public static boolean isEmailValid(String email) {
-		String emailRegex1 = "^[a-zA-Z0-9]+(.??)[a-zA-Z0-9]+@+[a-zA-Z0-9]+(.+)[a-zA-Z0-9]*(.+)[a-zA-Z]{2,}$";
-		Pattern p = Pattern.compile(emailRegex1);
-		if (email == null) {
-			return false;
-		}
-		Matcher m = p.matcher(email);
-		String result = m.matches() ? "Email " + email + " is valid" : "Email " + email + " is not valid";
-		System.out.println(result);
-		return m.matches();
-	}
-
 	public static void main(String[] args) {
+		UserRegistration userRegistration = new UserRegistration();
 		String email1 = "abc@yahoo.com";
 		String email2 = "abc-100@yahoo.com";
 		String email3 = "abc.100@yahoo.com";
@@ -54,26 +32,26 @@ public class ValidateEmail {
 		String email20 = "abc@gmail.com.aa.au ";
 		String email21 = "abc@%*.com";
 
-		isEmailValid(email1);
-		isEmailValid(email2);
-		isEmailValid(email3);
-		isEmailValid(email4);
-		isEmailValid(email5);
-		isEmailValid(email6);
-		isEmailValid(email7);
-		isEmailValid(email8);
-		isEmailValid(email9);
-		isEmailValid(email10);
-		isEmailValid(email11);
-		isEmailValid(email12);
-		isEmailValid(email13);
-		isEmailValid(email14);
-		isEmailValid(email15);
-		isEmailValid(email16);
-		isEmailValid(email17);
-		isEmailValid(email18);
-		isEmailValid(email19);
-		isEmailValid(email20);
-		isEmailValid(email21);
+		userRegistration.validate(email1, InputField.EMAIL);
+		userRegistration.validate(email2, InputField.EMAIL);
+		userRegistration.validate(email3, InputField.EMAIL);
+		userRegistration.validate(email4, InputField.EMAIL);
+		userRegistration.validate(email5, InputField.EMAIL);
+		userRegistration.validate(email6, InputField.EMAIL);
+		userRegistration.validate(email7, InputField.EMAIL);
+		userRegistration.validate(email8, InputField.EMAIL);
+		userRegistration.validate(email9, InputField.EMAIL);
+		userRegistration.validate(email10, InputField.EMAIL);
+		userRegistration.validate(email11, InputField.EMAIL);
+		userRegistration.validate(email12, InputField.EMAIL);
+		userRegistration.validate(email13, InputField.EMAIL);
+		userRegistration.validate(email14, InputField.EMAIL);
+		userRegistration.validate(email15, InputField.EMAIL);
+		userRegistration.validate(email16, InputField.EMAIL);
+		userRegistration.validate(email17, InputField.EMAIL);
+		userRegistration.validate(email18, InputField.EMAIL);
+		userRegistration.validate(email19, InputField.EMAIL);
+		userRegistration.validate(email20, InputField.EMAIL);
+		userRegistration.validate(email21, InputField.EMAIL);
 	}
 }
